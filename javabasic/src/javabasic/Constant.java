@@ -4,12 +4,12 @@ public class Constant {
 	
 	public static void main(String[] args) {
 		
-		final int fi1;
-		// System.out.println(fi1);
+		final int FI1;
+		// System.out.println(FI1);
 		
-		final int fi2 = 1;
-		System.out.println(fi2);
-		// fi2 = 2;
+		final int FI2 = 1;
+		System.out.println(FI2);
+		// FI2 = 2;
 		
 	}
 
