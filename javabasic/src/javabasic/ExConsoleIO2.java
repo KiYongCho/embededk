@@ -10,30 +10,25 @@ public class ExConsoleIO2 {
 		
 		System.out.println("3개의 문자열을 입력해 주세요!");
 		
-		// 불리언인 것의 개수를 저장할 변수
+		// boolean인 것의 개수를 저장할 변수 생성
 		int booleanCount = 0;
 		
-		if(scanner.hasNextBoolean()) {
-			booleanCount = booleanCount + 1; // booleanCount++;
-		}
-		
+		if (scanner.hasNextBoolean()) booleanCount = booleanCount + 1;
 		scanner.next();
-		if(scanner.hasNextBoolean()) {
-			booleanCount = booleanCount + 1; // booleanCount++;
-		}		
-		
+		if (scanner.hasNextBoolean()) booleanCount = booleanCount + 1;
 		scanner.next();
-		if(scanner.hasNextBoolean()) {
-			booleanCount = booleanCount + 1; // booleanCount++;
-		}
+		if (scanner.hasNextBoolean()) booleanCount = booleanCount + 1;
 		
-		System.out.println("총 " + booleanCount + "개의 boolean이 있습니다!");
+		System.out.println("전체 " + booleanCount + "개의 boolean이 있습니다!");
 		
-		scanner.close();
-		
-	} // main
+	}
 
-} // class
+}
+
+
+
+
+
 
 
 

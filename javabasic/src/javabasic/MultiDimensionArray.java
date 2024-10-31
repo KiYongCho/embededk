@@ -4,13 +4,11 @@ public class MultiDimensionArray {
 	
 	public static void main(String[] args) {
 		
-		// 2차원 배열 선언과 초기화를 동시에
-		// intArr의 length : 3, 인덱스범위 : 0~2
-		// intArr[0]의 length : 3, 인덱스범위 : 0~2
-		// 3행 3열의 배열 자료구조
-		int[][] intArr = new int[3][3];
-		
-		// 2차원 배열 할당
+		// 2차원 배열 선언과 초기화를 동시에 하는 코드
+		// intArr의 length : intArr은 1차원 int[] 3개의 요소가 있으므로 length는 3 (인덱스 0~2)
+		// intArr[0]의 length : intArr[0]은 1차원 배열이므로 length는 3 (인덱스 0~2)
+		// [3][3] => 3행 3열
+		int[][] intArr = new int[3][3]; // 0이 9개 3행 3열로 초기화 됨
 		intArr[0][0] = 1;
 		intArr[0][1] = 2;
 		intArr[0][2] = 3;
@@ -21,16 +19,14 @@ public class MultiDimensionArray {
 		intArr[2][1] = 8;
 		intArr[2][2] = 9;
 		
-		int intArrLength = intArr.length; // 2차원 배열의 요소의 수
+		int intArrLength = intArr.length; // 2차원 배열의 요소의 수 (길이 = length)
 		int intArr0Length = intArr[0].length; // 1차원 배열의 요소의 수
-		for (int i=0; i<intArrLength; i++) { // 행의 수만큼 반복
-			for (int j=0; j<intArr0Length; j++) { // 열의 수만큼 반복
-				System.out.print(intArr[i][j] + "(" + i + "," + j + ")" + " ");
+		for (int i=0; i<intArrLength; i++) { // 행 반복
+			for (int j=0; j<intArr0Length; j++) { // 열 반복
+				System.out.println(intArr[i][j]);
 			}
-			System.out.println();
 		}
 		
-		// 2차원 배열 선언, 초기화, 할당을 동시에
 		int[][] intArr2 = {
 				{1, 2, 3},
 				{4, 5, 6},
@@ -44,9 +40,9 @@ public class MultiDimensionArray {
 		}
 		
 		String[][] strArr = {
-				{"홍길동", "강감찬", "이순신"},	
-				{"서울", "부산", "제주"},	
-				{"학생", "직장인", "가수"}	
+				{"홍길동", "강감찬", "이순신"},
+				{"서울", "부산", "제주"},
+				{"학생", "직장인", "가수"}
 		};
 		
 		for (String[] sArr : strArr) {
@@ -54,10 +50,21 @@ public class MultiDimensionArray {
 				System.out.println(str);
 			}
 		}
-		
+			
 	} // main
 
 } // class
+
+
+
+
+
+
+
+
+
+
+
 
 
 
