@@ -14,7 +14,6 @@ public class ExMethod5 {
 		
 		printScore(scoreArray);
 		
-		
 	} // main
 	
 	static void calcScore(String[][] scoreArray) {
@@ -33,7 +32,7 @@ public class ExMethod5 {
 	static void printScore(String[][] scoreArray) {
 		for (int i=0; i<scoreArray.length; i++) {
 			for (int j=0; j<scoreArray[0].length; j++) {
-				System.out.print(scoreArray[i][j] + "\t");
+				System.out.print(scoreArray[i][j] + " ");
 			}
 			System.out.println();
 		}		

@@ -7,9 +7,12 @@ public class ExMethod4 {
 	public static void main(String[] args) {
 		
 		System.out.println("별의 수를 정수로 입력해 주세요!");
+		printStar(input());
+	}
+	
+	static int input() {
 		Scanner scanner = new Scanner(System.in);
-		printStar(scanner.nextInt());
-		scanner.close();
+		return scanner.nextInt();
 	}
 	
 	static void printStar(int starCount) {
