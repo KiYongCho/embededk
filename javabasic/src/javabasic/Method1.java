@@ -5,7 +5,7 @@ public class Method1 {
 	public static void main(String[] args) {
 		
 		// print메서드 호출 (Invocation = Call)
-		print("Hello Java!");
+		print("Hello Java!"); 
 		print("Java Programming");
 		
 		// add메서드 호출

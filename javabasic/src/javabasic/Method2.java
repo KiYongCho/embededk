@@ -2,7 +2,7 @@ package javabasic;
 
 public class Method2 {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		
 		// Method2타입의 객체 method2를 생성
 		// Method2타입의 객체를 생성해서 객체참조값을 method2변수에 저장
