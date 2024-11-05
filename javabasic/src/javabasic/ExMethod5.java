@@ -2,6 +2,8 @@ package javabasic;
 
 public class ExMethod5 {
 	
+	public static final int SUBJECT_COUNT = 3;
+	
 	public static void main(String[] args) {
 		
 		String[][] scoreArray = {
@@ -23,7 +25,7 @@ public class ExMethod5 {
 			for (int j=1; j<4; j++) {
 				sum += Integer.parseInt(scoreArray[i][j]);
 			}
-			avg = sum / scoreArray.length;
+			avg = sum / SUBJECT_COUNT;
 			scoreArray[i][4] = "" + sum;
 			scoreArray[i][5] = "" + avg;
 		}

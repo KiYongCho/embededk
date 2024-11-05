@@ -1,0 +1,14 @@
+[실습]
+
+아래 상속계층도에 따라서 클래스 관계를 설정해 보세요.
+
+생물 (Creature)
+	동물 (Animal)
+		포유류 (Mammal)
+			개 (Dog)
+			고양이 (Cat)
+			고래 (Whale)
+		조류 (Bird)
+			닭 (Chicken)
+			독수리 (Eagle)
+		
