@@ -1,0 +1,15 @@
+[개인 실습 extra]
+0. javabasic.exapiextra 패키지 생성
+1. APIExtra1.java : 문자열을 한 줄 입력받아서 문자열의 길이를 출력
+2. APIExtra2.java : "Hello Java"라는 문자열내의 문자들의 아스키코드값의 총합을 출력
+3. APIExtra3.java : 문자 5개를 입력하면 3번째 입력한 문자의 아스키코드값을 출력
+4. APIExtra4.java : 문자열을 두 줄 입력하고 첫번째 문자열내에 두번째 문자열이 존재하는지 출력
+5. APIExtra5.java : 문자열을 두 줄 입력하고 첫번째 문자열내에 두번째 문자열이 몇 개 존재하는지 출력
+6. APIExtra6.java : 문자 10개를 공백과 함께 입력하면 모두 합쳐진 문자열을 출력 (StringBuilder 사용)
+7. APIExtra7.java : 영문 대소문자를 포함한 문자열을 입력하면 대문자는 소문자로 소문자로 대문자로
+  변환하여 출력
+8. APIExtra8.java : 영문 대소문자, 숫자, 기호를 포함한 문자열을 입력하면 대문자, 소문자, 숫자, 기호의
+  개수를 출력
+9. APIExtra9.java : 미국독립선언서(americadoi.txt) 파일내의 한글, 영문, 기호의 개수를 출력
+10. APIExtra10.java : 미국독립선언서(americadoi.txt) 파일내에서 영단어 중 길이가 가장 긴 단어부터
+  가장 짧은 단어를 순서대로 개수와 함께 출력
