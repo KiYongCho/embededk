@@ -3,6 +3,8 @@ package javabasic.exapi2;
 import java.util.Calendar;
 import java.util.Scanner;
 
+//년도4자리 월2자리 입력받아서 달력을 출력
+
 public class ExDate2 {
 	
 	public static void main(String[] args) {
