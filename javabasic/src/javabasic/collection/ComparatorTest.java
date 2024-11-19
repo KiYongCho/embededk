@@ -148,6 +148,56 @@ public class ComparatorTest {
 		});
 		System.out.println(stdList);
 		
+		// 3) 아래 리스트를 이름순으로 1차 오름차순 정렬하고 가격순으로 2차 내림정렬
+		/* 결과
+		마우스 200
+		마우스 100
+		모니터 200
+		모니터 100
+		...
+		*/
+		class Product {
+			String name;
+			int price;
+			Product(String name, int price) {
+				this.name = name;
+				this.price = price;
+			}
+			@Override
+			public String toString() {
+				return name + ":" + price;
+			}
+		}
+		List<Product> prodList = new ArrayList<Product>();
+		prodList.add(new Product("피씨", 100));
+		prodList.add(new Product("모니터", 100));
+		prodList.add(new Product("마우스", 100));
+		prodList.add(new Product("키보드", 100));
+		prodList.add(new Product("스피커", 100));
+		prodList.add(new Product("피씨", 200));
+		prodList.add(new Product("모니터", 200));
+		prodList.add(new Product("마우스", 200));
+		prodList.add(new Product("키보드", 200));
+		prodList.add(new Product("스피커", 200));
+		
+		Collections.sort(prodList, new Comparator<Product>() {
+			public int compare(Product prod1, Product prod2) {
+				return prod1.name.compareTo(prod2.name);
+			};
+		});
+		System.out.println(prodList);
+		
+		Collections.sort(prodList, new Comparator<Product>() {
+			public int compare(Product prod1, Product prod2) {
+				if (prod1.name.equals(prod2.name)) {
+					return prod2.price - prod1.price;
+				} else {
+					return 0;
+				}
+			};
+		});
+		System.out.println(prodList);		
+		
 	} // main
 
 } // class
