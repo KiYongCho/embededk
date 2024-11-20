@@ -1,21 +1,27 @@
 package javabasic.excollection;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class PokerRule {
 	
+	// 상수
+	public static final int CARDLIST_SIZE = 7;
+	
 	// 로얄스트레이트플러시 여부 : 연속된 5개의 숫자(10~14)이고 5개가 동일한 무늬
 	public static boolean isRoyalStraightFlush(List<Card> cardList) {
-		return false;
+		return isTopStraight(cardList) && isStraight(cardList) && isFlush(cardList);
 	}
 	
 	// 스트레이트플러시 여부 : 연속된 5개의 숫자이고 5개가 동일한 무늬, 로얄 제외
 	public static boolean isStraightFlush(List<Card> cardList) {
-		return !isRoyalStraightFlush(cardList) && (isStraight(cardList) && isFlush(cardList));
+		return !isTopStraight(cardList) && isStraight(cardList) && isFlush(cardList);
 	}
 	
-	// 포카드 여부 : 4개의 숫자가 동일
+	// 포카드 여부 : 4개의 숫자가 동일 (구현)
 	public static boolean isFourCard(List<Card> cardList) {
+
 		return false;
 	}	
 	
@@ -29,12 +35,12 @@ public class PokerRule {
 		return false;
 	}
 	
-	// 플러시 여부 : 동일한 무늬 5개 이상
+	// 플러시 여부 : 동일한 무늬 5개 이상 (구현)
 	public static boolean isFlush(List<Card> cardList) {
 		return false;
 	}	
 	
-	// 스트레이트 여부 : 연속된 번호가 5개 이상
+	// 스트레이트 여부 : 연속된 번호가 5개 이상 (구현)
 	public static boolean isStraight(List<Card> cardList) {
 		return false;
 	}	
@@ -57,14 +63,19 @@ public class PokerRule {
 		return false;
 	}
 	
-	// 페어수를 반환
+	// 페어수를 반환 (구현)
 	public static int numOfPair(List<Card> cardList) {
 		return 0;
 	}	
 	
-	// 트리플수를 반환
+	// 트리플수를 반환 (구현)
 	public static int numOfTriple(List<Card> cardList) {
 		return 0;
+	}
+	
+	// 탑스트레이트 여부 반환 (10~14 연속된 숫자) (구현)
+	public static boolean isTopStraight(List<Card> cardList) {
+		return false;
 	}
 	
 } // class
