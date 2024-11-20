@@ -64,6 +64,7 @@ public class PokerMain {
 		
 		for (Player player : playerList) {
 			System.out.println(player);
+			printResult(player);
 		}
 		
 	} // main
@@ -78,6 +79,21 @@ public class PokerMain {
 		shapeCountMap.put("D", 0);
 		shapeCountMap.put("H", 0);
 		shapeCountMap.put("C", 0);
+	}
+	
+	private static void printResult(Player player) {
+		String resultStr = "";
+		if (PokerRule.isRoyalStraightFlush(player)) resultStr = "[로열스트레이트플러시]";
+		else if (PokerRule.isStraightFlush(player)) resultStr = "[스트레이트플러시]";
+		else if (PokerRule.isFourCard(player)) resultStr = "[포카드]";
+		else if (PokerRule.isFullHouse(player)) resultStr = "[풀하우스]";
+		else if (PokerRule.isFlush(player)) resultStr = "[플러시]";
+		else if (PokerRule.isStraight(player)) resultStr = "[스트레이트]";
+		else if (PokerRule.isTriple(player)) resultStr = "[트리플]";
+		else if (PokerRule.isTwoPair(player)) resultStr = "[투 페어]";
+		else if (PokerRule.isOnePair(player)) resultStr = "[원 페어]";
+		else resultStr = "[족보 없음]";
+		System.out.println(resultStr);
 	}
 	
 } // class
