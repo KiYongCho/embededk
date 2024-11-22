@@ -9,7 +9,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-public class ObjectTest {
+public class ObjectTest1 {
 	
 	public static void main(String[] args) {
 		
