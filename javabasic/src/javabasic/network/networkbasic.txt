@@ -1,0 +1,110 @@
+# Network 기본 개념
+
+* Protocol
+네트워크 상에서 서로 다른 노드(node=네트워크 상에 연결된 모든 식별 가능한 디바이스) 간에
+통신을 하기 위한 약속(규약)
+
+* TCP (Transfer Control Protocol)
+- 전송제어프로토콜
+- 신뢰성 있는 통신을 하기 위해 데이터를 보내고 받았는지 확인 (echo신호)
+- 데이터의 신뢰도를 보장하는 반면 속도가 UDP보다 느림
+- HTTP, FTP 등 다른 하위프로토콜의 상위프로토콜
+- 1:1 신뢰성 있는 통신에 많이 사용되는 프로토콜
+- 연결지향형 프로토콜 : 서로 연결된 상태에서 데이터를 송/수신 (Stateful)
+- TCP에서 데이터단위는 Packet
+- Packet은 Header와 Body로 구성
+
+* IP (Internet Protocol)
+- 인터넷 상에서 노드들의 위치(주소)를 검색하기 위한 프로토콜
+- 일반적으로 TCP/IP라고 얘기하는건 TCP프로토콜과 IP프로토콜을 사용한다는 것
+
+* UDP (User Datagram Protocol)
+- 신뢰성 보다는 전송속도를 중시하는 프로토콜
+- 데이터를 송신하고 수신을 확인하지 않음
+- 대용량 데이터(영상, 음성 ...)를 송신할때 주로 사용
+- UDP에서 데이터단위는 Datagram
+
+* HTTP (HyperText Transfer Protocol)
+- 하이퍼텍스트(웹링크) 전송을 위해 설계된 프로토콜
+- TCP의 하위프로토콜
+- 비연결지향형 프로토콜 : 연결 > 데이터송신 > 연결끊음, 연결 > 데이터송신 > 연결끊음 ... (Stateless)
+
+* HTTPS (HyperText Transfer Protocol Secure)
+- HTTP에 보안기능을 강화한 프로토콜
+- HTTP는 평문 전송, HTTP는 송신시에 데이터를 암호화하고 수신시에 복호화
+
+* FTP (File Tranfer Protocol)
+- TCP의 하위프로토콜
+- 파일 송수신에 사용되는 프로토콜
+- FTP는 Port를 두개 사용 : 하나는 연결포트, 하나는 데이터 송/수신포트
+
+* SMTP (Simple Mail Transfer Protocol)
+- 이메일 송신용 프로토콜
+- POP, IMAP : 이메일 수신용 프로토콜
+
+* Socket
+- TCP통신에서 통신에 필요한 연결을 추상화 놓은 개념 (1 Connection =  1 Socket)
+- TCP상에서 노드들은 각자의 소켓을 통해서 데이터를 송/수신함
+
+* ServerSocket
+- 서버에 연결을 요청하는 클라이언트들에게 Socket을 배정하기 위한 소켓
+- 클라이어트Socket이 ServerSocket에 연결을 요청하면 ServerSocket은
+  서버에 Socket을 생성해서 클라이언트Socket과 송/수신할 수 있도록 함
+
+* Port
+- 노드가 가지고 있는 논리적 연결점 (0~65545개의 포트)
+- 0~1023번 포트는 시스템(O/S)이 사용하는 포트
+- 모든 통신을 하기 위해서는 서버의 IP주소와 Port번호를 알아야 함
+- 80: web(HTTP)
+- 443: web(HTTPS)
+- 8080:tomcat, oracle web
+- 20 : ftp 연결
+- 21 : ftp 송수신
+- 23 : telnet 포트
+- 25 : SMTP 포트
+- 1521 : oracle
+- 3306 : mysql 
+
+* URI (Uniform Resource Identifier)
+- URL, URN의 상위개념
+- 노드의 리소스 식별을 위한 문자열
+- 예) https://www.naver.com/files/a.txt#post
+
+* URL (Uniform Resource Locator)
+- 노드의 리소스의 위치
+- 예) https://www.naver.com/files/a.txt 
+
+* URN (Uniform Resource Name)
+- 노드의 이름
+- www.naver.com/files/a.txt#post
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
