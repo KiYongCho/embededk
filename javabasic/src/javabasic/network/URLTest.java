@@ -13,7 +13,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class URLTest {
+public class URLTest { 
 	
 	public static void main(String[] args) {
 		
