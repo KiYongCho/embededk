@@ -14,8 +14,8 @@ public class LinkedListTest {
 		intList.add(1);
 		intList.add(2);
 		intList.add(3);
-		intList.addFirst(0); // 첫번째 요소 추가
-		intList.addLast(4); // 마지막 요소 추가
+		((LinkedList)intList).addFirst(0); // 첫번째 요소 추가
+		((LinkedList)intList).addLast(4); // 마지막 요소 추가
 		System.out.println(intList);
 		
 		// 첫번째 요소 가져오기 (꺼내진 않고)
@@ -33,9 +33,9 @@ public class LinkedListTest {
 		// 요소 제거
 		intList.remove(1);
 		System.out.println(intList);
-		intList.removeFirst();
+		((LinkedList)intList).removeFirst();
 		System.out.println(intList);
-		intList.removeLast();
+		((LinkedList)intList).removeLast();
 		System.out.println(intList);
 		
 	} // main
