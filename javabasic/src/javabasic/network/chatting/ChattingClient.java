@@ -12,7 +12,7 @@ import java.util.function.Consumer;
 public class ChattingClient {
 	
 	// 클라이언트 아이디
-	private String cid;
+	// private String cid;
 	
 	// 서버와 송수신하기 위한 클라이언트 소켓
 	private Socket clientSocket;
@@ -47,9 +47,9 @@ public class ChattingClient {
 			// Consumer
 			this.onMessageReceived = onMessageReceived;
 			
-			System.out.println("사용하실 아이디를 입력해 주세요!");
-			Scanner scanner = new Scanner(System.in);
-			cid = scanner.nextLine();
+			//System.out.println("사용하실 아이디를 입력해 주세요!");
+			//Scanner scanner = new Scanner(System.in);
+			//cid = scanner.nextLine();
 			
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
@@ -59,7 +59,7 @@ public class ChattingClient {
 	
 	// 클라이언트에서 서버로 문자열 전송 메소드
 	public void sendMessage(String msg) {
-		out.println("[" + cid + "] " + msg);
+		// out.println("[" + cid + "] " + msg);
 	}
 	
 	// 서버에서 클라이언트에 전송하는 문자열을 수신하는 스레드를 포함하는 메소드
