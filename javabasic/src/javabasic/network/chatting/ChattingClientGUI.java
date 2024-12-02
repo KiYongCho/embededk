@@ -5,7 +5,6 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -22,7 +21,6 @@ import javax.swing.SwingUtilities;
 public class ChattingClientGUI extends JFrame {
 
 	public static final long serialVersionUID = 238945792234L;
-
 	
 	private JTextArea messageArea;
 	private JTextField textField;
