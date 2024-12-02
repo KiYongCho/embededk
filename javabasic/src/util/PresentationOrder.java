@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class PresentationOrder {
 
 	static String[] students = {
-			"박혜원", "손성진", "박종찬", "박승호", "구슬기", "김희라", "김시윤", "최경락"
+			"박혜원", "손성진", "박승호", "구슬기", "김희라", "김시윤", "최경락", ""
 	};
 	static String[] presentors = {"", "", "", "", "", "", "", ""};	
 	
