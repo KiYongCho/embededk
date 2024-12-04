@@ -10,5 +10,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="D:/embededk/lib/jlayer-1.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/embededk/lib/ojdbc6-11.2.0.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
