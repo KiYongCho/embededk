@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-// Statement 인터페이스를 사용한 쿼리 수행
+// Statement를 활용한 데이터 입력 및 조회
 public class JDBCTest2 {
 	
 	public static void main(String[] args) {

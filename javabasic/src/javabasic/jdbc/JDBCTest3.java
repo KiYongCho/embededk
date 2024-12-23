@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-// PreparedStatement를 이용한 CRUD (Create, Retreive, Update, Delete)
+// PreparedStatement를 활용한 데이터 CRUD
 public class JDBCTest3 {
 	
 	public static void main(String[] args) {

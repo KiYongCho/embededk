@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-// 데이터베이스 연결
+// DriverManager, Connection을 활용한 데이터베이스 연결
 public class JDBCTest1 {
 	
 	public static void main(String[] args) {
