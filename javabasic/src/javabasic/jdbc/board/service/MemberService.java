@@ -1,6 +1,7 @@
 package javabasic.jdbc.board.service;
 
 import java.util.List;
+
 import javabasic.jdbc.board.model.Member;
 
 public interface MemberService {
