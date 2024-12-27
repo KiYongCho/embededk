@@ -1,37 +1,23 @@
 package javabasic.oop;
 
+/*
+  정보은닉 (Information hiding) = 캡슐화 (Encapsulation)
+  	- 클래스의 변수들을 private 접근지정을 하고 변수값들을 가져가거나(getter)
+  	   변경(setter)하는 getter/setter 메소드를 public 으로 제공
+  	- 클래스 내부에 변수들의 값의 임의 변경하거나 가져가는 것을 제어할 목적
+ */
+
 public class Car2 {
-	
-	// 정보 은닉 (information hiding) = 캡슐화 (encapsulation)
-	// 클래스내의 멤버변수들을 private으로 선언하고
-	// public인 getter/setter를 만들어서 멤버변수의 값을
-	// 가져오거나 변경할 수 있도록 한다
-	// WHY? => 클래스내의 멤버변수들에 대한 접근을 통제하기 위해서
-	//                 클래스내의 멤버변수들의 값을 숨길 수도 있다.
-	//                 클래스내의 멤버변수들의 값을 가져가게도 가져가지 못하게도 할 수 있다.
-	//                 클래스내의 멤버변수들의 값을 변경하게도 변경하지 못하게도 할 수 있다.
-	//                 만약에 price를 노출하고 싶지 않으면 getPrice를 안 만들면 그만
+
 	private String company;
 	private String model;
 	private String name;
 	private int price;
-	
-	public Car2() {
-	}
 
-	// getter 메서드
-	// 형태 : get + 변수명을 대문자로 시작
-	// private멤버변수의 값을 가져가기 위한 public메서드
-	// 멤버변수에 직접 접근하지 못하고 하고 정해진 방법으로만 가져가도록 하기 위해 만듬
 	public String getCompany() {
 		return company;
 	}
 
-	// setter 메서드
-	// 형태 : set + 변수명을 대문자로 시작
-	// private멤버변수의 값을 변경하기 위한 public메서드
-	// 멤버변수에 직접 접근하지 못하고 하고 정해진 방법으로만 변경할 수 있도록 하기 위해 만듬
-	// this는 클래스를 통해 생성될 객체 자신을 가리키는 키워드 (동사무소 서식에 있는 홍길동)
 	public void setCompany(String company) {
 		this.company = company;
 	}
@@ -52,14 +38,25 @@ public class Car2 {
 		this.name = name;
 	}
 
+	// 클래스 외부에서 price변수의 원래 값을 알지 못하게 하려면 getter에서 값을 조절
 	public int getPrice() {
-		return price;
+		return price + 1000;
 	}
 
+	// 클래스 외부에서 price변수값의 변경을 막고 싶으면 setter를 제공하 않으면 됨
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	
-	
 
 }
+
+
+
+
+
+
+
+
+
+
+
