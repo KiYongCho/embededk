@@ -1,50 +1,25 @@
 package javabasic.oop;
 
-// PC객체를 생성하려면 Monitor, Desktop, Keyboard가 있어야 함
-// *** has a 관계 (위임관계, delegation)
-// 상속받지 않아도 가지고 있으므로 사용할 수 있는 관계
-// PC has a Monitor
-// PC has a Desktop
-// PC has a Keyboard
+// PC가 Monitor, Desktop, Keyboard를 사용하는 두가지 방법
+// 1. 상속 (is a) : 자바는 단일 상속만 지원, 즉 한 클래스가 한 클래스만 상속이 가능
+//                       => 강한 의존 관계 = 강한 결합 (Strong Coupling)
+// 2. 의존 (has a) : PC가 Monitor, Desktop, Keyboard를 멤버변수로 가짐
+//                       => 약한 의존 관계 = 약한 결합 (Weak Coupling)
+// 상속은 확장(Extention)의 개념, 의존은 위임(Delegation)의 개념
+
 public class PC {
-	
-	String company; // 제조회사
-	int price; // 가격
-	
+
+	// PC클래스와 PC클래스의 멤버변수들의 관계는 has a 관계
+	// => PC타입 객체가 생성되려면 Monitor타입 객체, Desktop타입 객체, 
+	//       Keyboard타입 객체가 먼저 생성되어야 함
+	// => PC 객체는 Monitor객체, Desktop객체, Keyboard객체에 의존(dependency)한다
+	String company;
+	int price;	
 	Monitor monitor;
 	Desktop desktop;
 	Keyboard keyboard;
-	
-	public PC() {
-	}
 
-	public PC(String company, Monitor monitor, Desktop desktop, Keyboard keyboard) {
-		this.company = company;
-		this.monitor = monitor;
-		this.desktop = desktop;
-		this.keyboard = keyboard;
-	}
-	
-	public int getPrice() {
-		return this.price;
-	}
-	
-	// PC의 가격은 모니터 가격 + 데스크탑 가격 + 키보드 가격
-	public void setPrice() {
-		this.price = monitor.price + desktop.price + keyboard.price;
-	}
-	
-	
-
-} // class
-
-
-
-
-
-
-
-
+}
 
 
 
