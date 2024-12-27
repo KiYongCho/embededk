@@ -1,14 +1,34 @@
 package javabasic.publicdata.model;
 
-public class Smoke {
+import java.io.Serializable;
+
+import com.google.gson.annotations.SerializedName;
+
+public class Smoke implements Serializable {
+	
+	private static final long serialVersionUID = 238479327492348L;
 
 	private int sid;
+	
+	@SerializedName("관리기관명")
 	private String orgname;
+	
+	@SerializedName("관리기관전화번호")
 	private String orgtel;
+	
+	@SerializedName("년도")
 	private int orgyear;
+	
+	@SerializedName("데이터기준일자")
 	private String datadate;
+	
+	@SerializedName("시군구")
 	private String sigungu;
+	
+	@SerializedName("흡연단속건수")
 	private int dscount;
+	
+	@SerializedName("흡연민원건수")
 	private int mwcount;
 
 	public Smoke() {

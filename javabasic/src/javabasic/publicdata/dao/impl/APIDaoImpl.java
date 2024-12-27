@@ -26,6 +26,46 @@ public class APIDaoImpl implements APIDao {
 	
 	@Override
 	public void initData(List<JsonElement> list) {
+		conn = connectionUtil.getConnection();
+		PreparedStatement pstmt = null;
+		Gson gson = new GsonBuilder().create();
+		
+		try {
+			
+			conn.setAutoCommit(false);			
+			
+			String initSql = " truncate table smoke ";
+			pstmt = conn.prepareStatement(initSql);
+			pstmt.executeUpdate();
+			
+			String sql = " insert into smoke values "
+					+ "(seq_smoke.nextval, ?, ?, ?, ?, ?, ?, ?)";
+			
+			for (JsonElement ele : list) {
+				Smoke smoke = gson.fromJson(ele, Smoke.class);
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1, smoke.getOrgname());
+				pstmt.setString(2, smoke.getOrgtel());
+				pstmt.setInt(3, smoke.getOrgyear());
+				pstmt.setString(4, smoke.getDatadate());
+				pstmt.setString(5, smoke.getSigungu());
+				pstmt.setInt(6, smoke.getDscount());
+				pstmt.setInt(7, smoke.getMwcount());
+				pstmt.executeUpdate();
+			}
+			
+			conn.commit();
+			
+		} catch (SQLException sqle) {
+			sqle.printStackTrace();
+			try {
+				conn.rollback();
+			} catch (SQLException sqle2) {
+				sqle2.printStackTrace();
+			}
+		} finally {
+			connectionUtil.closeAll(null, pstmt, conn);
+		}
 		
 	}
 
